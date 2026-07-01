@@ -1,0 +1,19 @@
+{
+  "name": "chatgpt-folders-extension",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A Chrome/Edge Manifest V3 extension that adds local synced folders to ChatGPT conversations.",
+  "scripts": {
+    "build": "vite build",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.287",
+    "jsdom": "^25.0.1",
+    "typescript": "^5.9.3",
+    "vite": "^6.0.7",
+    "vitest": "^2.1.8"
+  }
+}
