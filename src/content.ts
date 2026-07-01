@@ -80,9 +80,9 @@ const styles = `
     display: block;
     flex: none;
     font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    margin: 8px;
+    margin: 8px 0;
     min-width: 0;
-    width: calc(100% - 16px);
+    width: 100%;
   }
 
   * {
@@ -102,7 +102,7 @@ const styles = `
     align-items: center;
     height: 32px;
     gap: 6px;
-    padding: 0 8px;
+    padding: 0 20px;
     position: relative;
   }
 
@@ -153,9 +153,9 @@ const styles = `
 
   .cf-search {
     display: block;
-    width: calc(100% - 16px);
+    width: calc(100% - 40px);
     height: 32px;
-    margin: 4px 8px 8px;
+    margin: 4px 20px 8px;
     border: 1px solid color-mix(in srgb, CanvasText 14%, transparent);
     border-radius: 8px;
     background: transparent;
@@ -167,7 +167,7 @@ const styles = `
   .cf-bulk {
     display: grid;
     gap: 8px;
-    margin: 4px 8px 8px;
+    margin: 4px 20px 8px;
     padding: 8px;
     border: 1px solid color-mix(in srgb, CanvasText 10%, transparent);
     border-radius: 10px;
@@ -250,6 +250,7 @@ const styles = `
   .cf-list {
     display: grid;
     gap: 2px;
+    padding: 0 8px;
   }
 
   .cf-folder-block,
@@ -265,7 +266,7 @@ const styles = `
     min-height: 36px;
     gap: 8px;
     border-radius: 8px;
-    padding: 0 6px 0 12px;
+    padding: 0 12px;
     color: inherit;
     position: relative;
     width: 100%;
@@ -386,7 +387,7 @@ const styles = `
 
   .cf-empty,
   .cf-error {
-    padding: 6px 12px 8px 42px;
+    padding: 6px 12px 8px 54px;
     color: color-mix(in srgb, CanvasText 56%, transparent);
     font-size: 13px;
   }
@@ -1134,7 +1135,7 @@ function mountHost(): HTMLElement {
   host.id = HOST_ID;
   host.style.display = "block";
   host.style.flex = "none";
-  host.style.width = "calc(100% - 16px)";
+  host.style.width = "100%";
 
   const sidebar = findSidebar();
   if (!sidebar) {
