@@ -35,7 +35,7 @@ ChatGPT Folders 是一个 Chrome/Edge Manifest V3 浏览器扩展，用来在 Ch
 
 [下载 chatgpt-folders-extension.zip](https://github.com/FengXuT/GPT-Folder/raw/main/release/chatgpt-folders-extension.zip)
 
-下载后解压这个压缩包，然后在 Chrome / Edge 扩展管理页面中选择解压后的文件夹。
+下载后解压这个压缩包，然后在 Chrome / Edge 扩展管理页面中选择解压出来的 `dist/` 文件夹。
 
 ### 方式二：本地构建
 

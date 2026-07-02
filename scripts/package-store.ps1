@@ -18,10 +18,13 @@ try {
   if (Test-Path $zip) {
     Remove-Item -LiteralPath $zip -Force
   }
+  if (Test-Path $downloadZip) {
+    Remove-Item -LiteralPath $downloadZip -Force
+  }
 
   $files = Get-ChildItem -LiteralPath $dist -Force
   Compress-Archive -Path $files.FullName -DestinationPath $zip -Force
-  Copy-Item -LiteralPath $zip -Destination $downloadZip -Force
+  Compress-Archive -Path $dist -DestinationPath $downloadZip -Force
 
   Write-Host "Created $zip"
   Write-Host "Updated $downloadZip"
