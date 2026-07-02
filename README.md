@@ -77,9 +77,11 @@ npm.cmd run build
 常用命令：
 
 ```powershell
+npm.cmd run assets
 npm.cmd run typecheck
 npm.cmd test
 npm.cmd run build
+npm.cmd run package:store
 ```
 
 项目结构：
@@ -92,7 +94,42 @@ src/actions.ts         对外动作封装
 src/chatgpt.ts         ChatGPT URL 和标题识别
 src/types.ts           数据类型定义
 tests/                 单元测试
+scripts/               资产生成和商店打包脚本
+store-assets/          Chrome 商店展示素材
 ```
+
+## Chrome 商店发布
+
+发布到 Chrome Web Store 前，先生成图标和商店素材：
+
+```powershell
+npm.cmd run assets
+```
+
+然后生成商店上传包：
+
+```powershell
+npm.cmd run package:store
+```
+
+上传文件位于：
+
+```text
+release/chatgpt-folders-extension-store.zip
+```
+
+这个 ZIP 的根目录直接包含 `manifest.json`、`content.js` 和 `icons/`，可直接上传到 Chrome Developer Dashboard。
+
+商店素材位于：
+
+```text
+store-assets/small-promo-440x280.png
+store-assets/screenshot-1280x800.png
+```
+
+隐私政策：
+
+https://github.com/FengXuT/GPT-Folder/blob/main/PRIVACY.md
 
 ## 当前限制
 

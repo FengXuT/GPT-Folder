@@ -3,6 +3,12 @@
   "name": "ChatGPT Folders",
   "version": "0.1.0",
   "description": "Add synced folders for organizing ChatGPT conversations on the web.",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
   "permissions": ["storage"],
   "host_permissions": ["https://chatgpt.com/*", "https://chat.openai.com/*"],
   "content_scripts": [

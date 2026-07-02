@@ -6,6 +6,8 @@
   "description": "A Chrome/Edge Manifest V3 extension that adds local synced folders to ChatGPT conversations.",
   "scripts": {
     "build": "vite build",
+    "assets": "powershell -ExecutionPolicy Bypass -File scripts/generate-assets.ps1",
+    "package:store": "powershell -ExecutionPolicy Bypass -File scripts/package-store.ps1",
     "test": "vitest run",
     "typecheck": "tsc --noEmit"
   },
