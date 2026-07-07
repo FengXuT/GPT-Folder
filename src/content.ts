@@ -276,6 +276,16 @@ const styles = `
     background: color-mix(in srgb, CanvasText 10%, transparent);
   }
 
+  .cf-conversation-row {
+    gap: 6px;
+    padding: 0 6px 0 12px;
+  }
+
+  .cf-conversation-row .cf-icon-button {
+    flex: 0 0 26px;
+    margin-left: 4px;
+  }
+
   .cf-folder-main {
     display: flex;
     align-items: center;
@@ -318,13 +328,15 @@ const styles = `
   }
 
   .cf-conversation {
-    flex: 1;
+    flex: 1 1 0;
     display: block;
     min-width: 0;
+    width: 0;
     min-height: 28px;
     border-radius: 8px;
     color: color-mix(in srgb, CanvasText 76%, transparent);
-    padding: 5px 8px 5px 44px;
+    padding: 5px 0;
+    text-align: left;
     text-decoration: none;
   }
 
@@ -835,6 +847,7 @@ class FoldersPanel {
     for (const conversation of conversations) {
       const item = this.element("div", "cf-conversation-item");
       const row = this.element("div", "cf-folder-row");
+      row.classList.add("cf-conversation-row");
       const link = this.element("a", "cf-conversation", conversation.title) as HTMLAnchorElement;
       link.href = conversation.url;
       link.title = conversation.title;
